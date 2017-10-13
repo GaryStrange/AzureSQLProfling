@@ -7,4 +7,9 @@
     <TargetConnectionString>Data Source=pricingandpromotions.database.windows.net;Persist Security Info=False;User ID=gary.strange;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False</TargetConnectionString>
     <ProfileVersionNumber>1</ProfileVersionNumber>
   </PropertyGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="SECRET">
+      <Value>sv=2017-04-17&amp;ss=bfqt&amp;srt=sco&amp;sp=rwdlacup&amp;se=2017-10-15T01:02:03Z&amp;st=2017-10-12T17:02:03Z&amp;spr=https&amp;sig=Tye7AWqzpANLy%2Fg6TJ43t3xYOb%2FeJEmyii18%2B7N43Co%3D</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
 </Project>
