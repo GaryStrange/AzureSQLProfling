@@ -9,5 +9,8 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
---:r .\Security\SecurelyUpdateCredentialSecret.sql
+:setvar TableName $(credential_name)							
+               SELECT * FROM [$(TableName)]	
+--:r ".\Security\Credential1.sql"
+--:r ".\Event Sessions\SimpleTrace.sql"
 
