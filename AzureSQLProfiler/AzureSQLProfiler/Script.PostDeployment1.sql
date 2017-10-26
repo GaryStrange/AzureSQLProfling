@@ -9,8 +9,15 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-:setvar TableName $(credential_name)							
-               SELECT * FROM [$(TableName)]	
---:r ".\Security\Credential1.sql"
---:r ".\Event Sessions\SimpleTrace.sql"
+:r ".\Event Sessions\StopEventSession.sql"
+:r ".\Event Sessions\DropEventSession.sql"
+
+:r ".\Security\DropCredential.sql"
+:r ".\Security\Credential1.sql"
+
+:r ".\Event Sessions\SimpleTrace.sql"
+IF '$(start_on_publish)' = 'true'
+BEGIN
+	:r ".\Event Sessions\StartEventSession.sql" 
+END
 

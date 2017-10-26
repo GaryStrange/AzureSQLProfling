@@ -23,6 +23,8 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <CompatibilityMode>140</CompatibilityMode>
+    <IsEncryptionOn>True</IsEncryptionOn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -68,6 +70,11 @@
   <ItemGroup>
     <None Include="AzureSQLProfiler.publish.xml" />
     <None Include="AzureSQLProfilerLocal.publish.xml" />
+    <None Include="AzureSQLProfilerStandAlone.publish.xml" />
+    <None Include="Event Sessions\StopEventSession.sql" />
+    <None Include="Event Sessions\DropEventSession.sql" />
+    <None Include="Event Sessions\StartEventSession.sql" />
+    <None Include="Security\DropCredential.sql" />
   </ItemGroup>
   <ItemGroup>
     <SqlCmdVariable Include="CMK">
@@ -76,14 +83,17 @@
       <Value>$(SqlCmdVar__3)</Value>
     </SqlCmdVariable>
     <SqlCmdVariable Include="credential_name">
-      <DefaultValue>
-      </DefaultValue>
+      <DefaultValue>default</DefaultValue>
       <Value>$(SqlCmdVar__4)</Value>
     </SqlCmdVariable>
     <SqlCmdVariable Include="SECRET">
       <DefaultValue>
       </DefaultValue>
       <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="start_on_publish">
+      <DefaultValue>true</DefaultValue>
+      <Value>$(SqlCmdVar__5)</Value>
     </SqlCmdVariable>
   </ItemGroup>
   <ItemGroup>
