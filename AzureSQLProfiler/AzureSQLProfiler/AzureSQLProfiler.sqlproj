@@ -75,6 +75,7 @@
     <None Include="Event Sessions\DropEventSession.sql" />
     <None Include="Event Sessions\StartEventSession.sql" />
     <None Include="Security\DropCredential.sql" />
+    <None Include="Event Sessions\GetEventSessionFromBlob.sql" />
   </ItemGroup>
   <ItemGroup>
     <SqlCmdVariable Include="CMK">
