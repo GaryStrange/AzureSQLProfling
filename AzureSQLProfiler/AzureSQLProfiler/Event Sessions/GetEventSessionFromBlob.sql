@@ -14,8 +14,10 @@ SELECT
 
  FROM (
 SELECT
-        f.*, 'CLICK_NEXT_CELL_TO_BROWSE_ITS_RESULTS!' as [CLICK_NEXT_CELL_TO_BROWSE_ITS_RESULTS],
-        CAST(event_data AS XML) AS [event_data_XML]  -- TODO: In ssms.exe results grid, double-click this cell!
+		f.object_name
+		,f.file_name
+		,f.timestamp_utc
+        ,CAST(event_data AS XML) AS [event_data_XML]
 		
     FROM
         sys.fn_xe_file_target_read_file

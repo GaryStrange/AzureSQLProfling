@@ -21,7 +21,7 @@ CREATE
             -- TODO: Assign AzureStorageAccount name, and the associated Container name.
             -- Also, tweak the .xel file name at end, if you like.
             SET filename =
-                '$(credential_name)/trace-file.xel'
+                'https://$(credential_name)/trace-file.xel'
             )
     WITH
         (MAX_MEMORY = 10 MB,

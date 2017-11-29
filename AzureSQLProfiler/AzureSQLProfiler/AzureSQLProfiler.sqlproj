@@ -76,6 +76,7 @@
     <None Include="Event Sessions\StartEventSession.sql" />
     <None Include="Security\DropCredential.sql" />
     <None Include="Event Sessions\GetEventSessionFromBlob.sql" />
+    <None Include="AzureSQLProfiler.pt02.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <SqlCmdVariable Include="CMK">

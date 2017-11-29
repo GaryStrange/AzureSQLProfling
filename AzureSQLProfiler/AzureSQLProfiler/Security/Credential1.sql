@@ -4,7 +4,7 @@ CREATE
     DATABASE SCOPED
     CREDENTIAL
 		--must be a storage account SAS and not a blob account SAS. Plus the container
-        [$(credential_name)]
+        [https://$(credential_name)]
 		--[https://ecommdev.blob.core.windows.net/xevents]
     WITH
         IDENTITY = 'SHARED ACCESS SIGNATURE',  -- "SAS" token.
